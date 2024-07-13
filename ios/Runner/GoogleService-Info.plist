@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>328569448078-95nbqope5186650vsb209veb3oco9g5h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.328569448078-95nbqope5186650vsb209veb3oco9g5h</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>328569448078-1jas1h9h2ip1579ppep7dq9roo1ve5fr.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD61c1yQmY-FO3pcHZK_VzyOGvsrGKwx6Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>328569448078</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.vincenttech.musicvideo</string>
+	<key>PROJECT_ID</key>
+	<string>music-studio-7b57a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>music-studio-7b57a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:328569448078:ios:c0b977e7caf7863f3b4bdf</string>
+	<key>DATABASE_URL</key>
+	<string>https://music-studio-7b57a-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
