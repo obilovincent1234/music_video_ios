@@ -15,3 +15,10 @@ workflows:
           flutter build ios --release --no-codesign
     artifacts:
       - build/ios/iphoneos/*.ipa
+      - name: Install Dependencies
+  script: |
+    gem install cocoapods
+    pod repo update
+    pod install --repo-update
+    flutter pub get
+    flutter clean
