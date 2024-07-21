@@ -3,22 +3,18 @@ workflows:
     name: Build iOS
     max_build_duration: 60
     scripts:
-      - name: Install Dependencies
+      - name: Install CocoaPods
         script: |
           gem install cocoapods --pre
           pod repo update
-          pod install --repo-update
-          flutter pub get
-          flutter clean
+      - name: Clear CocoaPods Cache
+        script: |
+          pod cache clean --all
+      - name: Install Pods Verbosely
+        script: |
+          pod install --verbose --repo-update
       - name: Build iOS
         script: |
           flutter build ios --release --no-codesign
     artifacts:
       - build/ios/iphoneos/*.ipa
-      - name: Install Dependencies
-  script: |
-    gem install cocoapods
-    pod repo update
-    pod install --repo-update
-    flutter pub get
-    flutter clean
