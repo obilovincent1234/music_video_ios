@@ -1,31 +1,22 @@
-version: 2.0
-
-pipelines:
-  default:
-    steps:
-      - checkout
-
-      - flutter-install:
-          version: stable
-
-      - run:
-          name: Install CocoaPods
-          command: |
-            sudo gem install cocoapods
-            pod repo update
-
-      - run:
-          name: Install Dependencies
-          command: |
-            cd ios
-            pod install --repo-update
-
-      - flutter-test
-
-      - flutter-build:
-          ios:
-            build_mode: release
-
-      - deploy:
-          artifacts:
-            - build/ios/iphoneos/Runner.app
+workflows:
+  ios:
+    name: Build iOS
+    max_build_duration: 60
+    scripts:
+      - name: Install Dependencies
+        script: |
+          gem install cocoapods --pre
+          pod repo update
+          pod install --repo-update
+          flutter pub get
+          flutter clean
+      - name: Build iOS
+        script: |
+          flutter build ios --release --no-codesign
+    artifacts:
+      - build/ios/iphoneos/*.ipa
+    caching:
+      paths:
+        - ios/Pods
+        - ios/Podfile.lock
+        - .pub-cache
