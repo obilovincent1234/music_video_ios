@@ -15,8 +15,3 @@ workflows:
           flutter build ios --release --no-codesign
     artifacts:
       - build/ios/iphoneos/*.ipa
-    caching:
-      paths:
-        - ios/Pods
-        - ios/Podfile.lock
-        - .pub-cache
