@@ -33,7 +33,7 @@ target 'Runner' do
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 
   # Update StripeApplePay pod
-
+  pod 'StripeApplePay', '~> 22.8.4'  # Corrected version requirement
 end
 
 post_install do |installer|
